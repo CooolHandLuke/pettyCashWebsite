@@ -1,0 +1,215 @@
+/* #gallery {
+  display: grid;
+  gap: 2%;
+  width: 100vw;
+  height: 100vh;
+}
+
+#gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding: calc(1% + 1vmin) calc(2% + 1vmin);
+  box-sizing: border-box;
+  object-fit: cover;
+} */
+
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+#gallery img {
+  width: 100%;
+  height: 100%;
+  /* Make sure image fills its container */
+  object-fit: contain;
+  /* Ensures the full image is displayed without cropping */
+  display: block;
+  /* Ensures there are no line-height related gaps below the image */
+}
+
+/* ... rest of your CSS remains unchanged ... */
+
+/* Small screens - 1 column */
+@media (max-width: 600px) {
+  #gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Medium screens - 2 columns */
+@media (min-width: 601px) and (max-width: 900px) {
+  #gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large screens - 3 columns */
+@media (min-width: 901px) and (max-width: 1200px) {
+  #gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Extra large screens - 4 columns */
+@media (min-width: 1201px) {
+  #gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(235, 190, 210);
+  position: relative;
+  overflow-x: hidden;
+  /* Prevent horizontal scrolling */
+}
+
+/* Other styles related to logo, hamburger, and menu remain unchanged */
+
+.logo-placeholder {
+  position: fixed;
+  /* This ensures the logo stays fixed at its position */
+  top: 10px;
+  /* Offset from the top */
+  left: 50%;
+  /* Center the logo */
+  transform: translateX(-50%);
+  /* Adjusts for exact centering */
+  z-index: 1000;
+  /* Keeps it above other elements */
+  background-color: transparent;
+  /* Assuming you want no background, but adjust if needed */
+  font-size: 24px;
+  /* Adjust if needed */
+}
+
+.hamburger {
+  width: 40px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1000;
+  /* Position it absolutely within its relative parent (body or any positioned ancestor) */
+  top: 15px;
+  /* A little space from the top */
+  right: 10px;
+  /* A little space from the right */
+}
+
+.line {
+  width: 100%;
+  height: 5px;
+  border-radius: 3px;
+  background-color: pink;
+  transition: background-color 0.3s ease;
+}
+
+.line:nth-child(1) {
+  background-color: #ffe6ff;
+}
+
+.line:nth-child(2) {
+  background-color: #ffb3ff;
+}
+
+.line:nth-child(3) {
+  background-color: #ff66ff;
+}
+
+@keyframes cycleColors {
+
+  0%,
+  100% {
+    background-color: #ffe6ff;
+  }
+
+  33% {
+    background-color: #ffb3ff;
+  }
+
+  66% {
+    background-color: #ff66ff;
+  }
+}
+
+.hamburger:hover .line:nth-child(1) {
+  animation: cycleColors 1.5s infinite;
+}
+
+.hamburger:hover .line:nth-child(2) {
+  animation: cycleColors 1.5s 0.5s infinite;
+}
+
+.hamburger:hover .line:nth-child(3) {
+  animation: cycleColors 1.5s 1s infinite;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  /* Full viewport width */
+  height: 100vh;
+  /* Full viewport height */
+  padding-top: 50px;
+  /* to ensure content inside menu does not overlap logo */
+  z-index: 900;
+  /* less than logo's z-index */
+  /* Position it at the bottom */
+  left: 50%;
+  /* Adjusts it to the center */
+  transform: translateX(-50%);
+  /* Ensures the actual center of the menu is at center of the screen */
+  display: none;
+  /* Hidden by default */
+  /* width: 200px; */
+  /* Adjust this if needed */
+  /* height: calc(33.33vh); */
+  /* Take up the bottom third of the screen */
+  flex-direction: column;
+  justify-content: center;
+  /* Vertically center the menu items */
+  align-items: center;
+  /* Horizontally center the menu items */
+  background-color: rgb(235, 190, 210);
+
+}
+
+
+
+.menu-item {
+  font-size: 70px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
+  margin-bottom: -25px;
+}
+
+
+
+.menu-item:hover {
+  color: #aaa;
+}
+
+/* TO UNDO DAMAGE */
+/* #gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* 2 columns by default */
+/* gap: 16px; */
+/* Add other styling as needed
+} 
+*/
