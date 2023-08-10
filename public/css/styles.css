@@ -75,7 +75,7 @@ body {
 /* Other styles related to logo, hamburger, and menu remain unchanged */
 
 .logo-placeholder {
-  position: fixed;
+  position: absolute;
   /* This ensures the logo stays fixed at its position */
   top: 10px;
   /* Offset from the top */
@@ -84,11 +84,8 @@ body {
   transform: translateX(-50%);
   /* Adjusts for exact centering */
   z-index: 1000;
-  /* Keeps it above other elements */
-  background-color: transparent;
-  /* Assuming you want no background, but adjust if needed */
-  font-size: 24px;
-  /* Adjust if needed */
+  /* background-color: transparent; */
+
 }
 
 .hamburger {
