@@ -9,7 +9,7 @@
   width: 100%;
   height: auto;
   display: block;
-  padding: calc(1% + 1vmin) calc(2% + 1vmin);
+  padding: calc(0.5% + 0.5vmin) calc(3% + 2vmin);
   box-sizing: border-box;
   object-fit: cover;
 }
@@ -65,20 +65,19 @@ body {
   background-color: rgb(235, 190, 210);
   position: relative;
   overflow-x: hidden;
-  /* Prevent horizontal scrolling */
 }
 
 
 .logo {
   position: fixed;
-  top: 10px;
+  top: 5px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
 }
 
 .logo img {
-  max-width: 300px;
+  max-width: 500px;
   height: auto;
   z-index: 1000;
 }
@@ -149,29 +148,15 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  /* Full viewport width */
   height: 100vh;
-  /* Full viewport height */
   padding-top: 50px;
-  /* to ensure content inside menu does not overlap logo */
   z-index: 900;
-  /* less than logo's z-index */
-  /* Position it at the bottom */
   left: 50%;
-  /* Adjusts it to the center */
   transform: translateX(-50%);
-  /* Ensures the actual center of the menu is at center of the screen */
   display: none;
-  /* Hidden by default */
-  /* width: 200px; */
-  /* Adjust this if needed */
-  /* height: calc(33.33vh); */
-  /* Take up the bottom third of the screen */
   flex-direction: column;
   justify-content: center;
-  /* Vertically center the menu items */
   align-items: center;
-  /* Horizontally center the menu items */
   background-color: rgb(235, 190, 210);
 
 }
