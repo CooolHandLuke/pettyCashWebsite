@@ -5,13 +5,12 @@ const body = document.body;
 hamburger.addEventListener('click', () => {
   if (menu.style.display === 'none' || menu.style.display === '') {
     menu.style.display = 'flex';
-    body.style.overflow = 'hidden';  // Disable scrolling
+    body.style.overflow = 'hidden';
   } else {
     menu.style.display = 'none';
-    body.style.overflow = 'auto';  // Enable scrolling
+    body.style.overflow = 'auto';
   }
 });
-
 
 document.addEventListener("DOMContentLoaded", function () {
   fetch('/api/images')
@@ -21,13 +20,13 @@ document.addEventListener("DOMContentLoaded", function () {
       images.forEach(imgPath => {
         const img = document.createElement('img');
         img.src = imgPath;
-        img.loading = 'lazy'; // Lazy load the image
+        img.loading = 'lazy';
 
         // Randomizing the grid-row-end to make some images take up more vertical space
         const randomRowSpan = Math.floor(Math.random() * 3) + 1;
         img.style.gridRowEnd = `span ${randomRowSpan}`;
 
-        // Random padding for a jumbled effect
+        // Random padding
         const randomPaddingTop = Math.floor(Math.random() * 10) + 5;
         const randomPaddingRight = Math.floor(Math.random() * 10) + 5;
         img.style.paddingTop = `${randomPaddingTop}px`;
@@ -38,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// scripts.js
 $(document).ready(function () {
   $(".logo a").on('click', function (event) {
     event.preventDefault();
