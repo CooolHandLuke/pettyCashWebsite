@@ -27,8 +27,6 @@
   display: block;
 } */
 
-/* ... rest of your CSS remains unchanged ... */
-
 /* Small screens - 1 column */
 @media (max-width: 600px) {
   #gallery {
