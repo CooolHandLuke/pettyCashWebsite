@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
       images.forEach(imgPath => {
         const img = document.createElement('img');
         img.src = imgPath;
-        img.loading = 'lazy'; // Lazy load the image
+        // img.loading = 'lazy'; // Lazy load the image
 
         // Randomizing the grid-row-end to make some images take up more vertical space
         const randomRowSpan = Math.floor(Math.random() * 3) + 1;
