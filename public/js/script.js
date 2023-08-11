@@ -12,24 +12,6 @@ hamburger.addEventListener('click', () => {
   }
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   fetch('/api/images')
-//     .then(response => response.json())
-//     .then(images => {
-//       const gallery = document.getElementById('gallery');
-//       images.forEach(imgPath => {
-//         const img = document.createElement('img');
-//         img.src = imgPath;
-//         img.loading = 'lazy';  // Lazy load the image
-
-//         const randomPaddingH = Math.floor(Math.random() * 5) + 1; // Horizontal padding
-//         const randomPaddingV = Math.floor(Math.random() * 5) + 1; // Vertical padding
-//         img.style.padding = `${randomPaddingV}% ${randomPaddingH}%`;
-
-//         gallery.appendChild(img);
-//       });
-//     });
-// });
 
 document.addEventListener("DOMContentLoaded", function () {
   fetch('/api/images')

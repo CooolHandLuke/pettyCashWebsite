@@ -1,0 +1,26 @@
+{
+  "name": "pettyCashWebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+"scripts": {
+  "start": "node",
+  "watch": "nodemon --ext *"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CooolHandLuke/pettyCashWebsite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CooolHandLuke/pettyCashWebsite/issues"
+  },
+  "homepage": "https://github.com/CooolHandLuke/pettyCashWebsite#readme",
+  "devDependencies": {
+    "connect-livereload": "^0.6.1",
+    "livereload": "^0.9.3",
+    "nodemon": "^3.0.1"
+  }
+}
