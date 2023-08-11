@@ -105,30 +105,30 @@ body {
 }
 
 .line:nth-child(1) {
-  background-color: #ffe6ff;
+  background-color: #fdedf4;
 }
 
 .line:nth-child(2) {
-  background-color: #ffb3ff;
+  background-color: #fbe0ec;
 }
 
 .line:nth-child(3) {
-  background-color: #ff66ff;
+  background-color: #ffd3e7;
 }
 
 @keyframes cycleColors {
 
   0%,
   100% {
-    background-color: #ffe6ff;
+    background-color: #fdedf4;
   }
 
   33% {
-    background-color: #ffb3ff;
+    background-color: #fbe0ec;
   }
 
   66% {
-    background-color: #ff66ff;
+    background-color: #ffd3e7;
   }
 }
 
