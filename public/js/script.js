@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const credits = document.createElement('div');
           credits.className = 'credits';
           credits.innerText = 'Loading credits...';
-          credits.style.opacity = '0'; // Initially set opacity to 0
+          // credits.style.opacity = '0'; // Initially set opacity to 0
           container.appendChild(credits);
 
           // Fetch the credits text and update the credits div
