@@ -1,32 +1,3 @@
-#gallery {
-  display: grid;
-  gap: 2%;
-  width: 100vw;
-  height: 100vh;
-}
-
-#gallery img {
-  width: 100%;
-  height: auto;
-  display: block;
-  padding: calc(0.5% + 0.5vmin) calc(3% + 2vmin);
-  box-sizing: border-box;
-  object-fit: cover;
-}
-
-/* #gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 16px;
-  width: 100%;
-}
-
-#gallery img {
-  max-width: 100%;
-  object-fit: contain;
-  display: block;
-} */
-
 /* Small screens - 1 column */
 @media (max-width: 600px) {
   #gallery {
@@ -66,6 +37,63 @@ body {
 }
 
 
+.credits {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  opacity: 0;
+  z-index: 3;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  transform: translateY(-25%);
+  align-items: center;
+}
+
+/* IMAGE GALLERY STYLING */
+.image-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+body #gallery .image-container:hover .credits {
+  opacity: 1;
+}
+
+#gallery {
+  display: grid;
+  gap: 2%;
+  width: 100vw;
+  height: 100vh;
+}
+
+#gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding: calc(0.5% + 0.5vmin) calc(3% + 2vmin);
+  box-sizing: border-box;
+  object-fit: cover;
+  transition: filter 0.3s ease-in-out;
+  position: relative;
+  z-index: 2;
+}
+
+.image-container:hover img {
+  filter: brightness(0.5);
+}
+
+
+/* LOGO AND HAMBURGER ICON */
+
 .logo {
   position: fixed;
   top: 5px;
@@ -75,9 +103,10 @@ body {
 }
 
 .logo img {
-  max-width: 500px;
+  max-width: 400px;
   height: auto;
   z-index: 1000;
+  filter: drop-shadow(0 0 0.75rem #ffd3e7);
 }
 
 .hamburger {
@@ -159,8 +188,6 @@ body {
 
 }
 
-
-
 .menu-item {
   font-size: 70px;
   text-decoration: none;
@@ -170,18 +197,6 @@ body {
   margin-bottom: -25px;
 }
 
-
-
 .menu-item:hover {
   color: #aaa;
 }
-
-/* TO UNDO DAMAGE */
-/* #gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  /* 2 columns by default */
-/* gap: 16px; */
-/* Add other styling as needed
-} 
-*/
